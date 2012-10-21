@@ -9,7 +9,7 @@
 
 jimport('joomla.plugin.plugin');
 
-class plgContentStriplist extends JPlugin
+class plgSystemStriplist extends JPlugin
 {
 
 	function onAfterRender()
@@ -17,19 +17,19 @@ class plgContentStriplist extends JPlugin
 
 		$app     = JFactory::getApplication();
 		$buffer  = JResponse::getBody();
-		$classes = htmlspecialchars($this->params->get('classes'));
-		$classes = explode(',', str_replace(' ', '', $classes));
+		$classes = $this->params->get('classes');
+		$classes = explode(',', str_replace(' ','',$classes));
 
 		if ($app->isAdmin()) {
 			return;
 		}
 
 		foreach ($classes as $class) {
-
-			$buffer = preg_replace('/<li class=\"(.*)' . $class . '\">(.*)<\/li>/', '', $buffer);
+			$buffer = preg_replace('/<li class=\"(.*)' . $class . '\"><(.*)><\/li>/', '', $buffer);
 		}
 
 		JResponse::setBody($buffer);
+		//JResponse::setBody(print_r($classes));
 
 		return TRUE;
 	}
