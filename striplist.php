@@ -25,7 +25,7 @@ class plgSystemStriplist extends JPlugin
 		}
 
 		foreach ($classes as $class) {
-			$buffer = preg_replace('/<li class=\"(.*)' . $class . '\"><(.*)><\/li>/', '', $buffer);
+			$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z ]*)?' . $class . '([a-zA-Z0-9 ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
 		}
 
 		JResponse::setBody($buffer);
