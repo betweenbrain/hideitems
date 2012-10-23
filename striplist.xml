@@ -13,6 +13,11 @@
 		<filename plugin="striplist">striplist.php</filename>
 	</files>
 	<params>
+		<param name="contexts"
+			   type="text"
+			   default=""
+			   label="Context"
+			   description="The item IDs when to fire this plugin."/>
 		<param name="classes"
 			   type="text"
 			   default=""
