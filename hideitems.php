@@ -25,7 +25,7 @@ class plgSystemHideitems extends JPlugin
 		$itemId = JRequest::getInt('Itemid', 0);
 
 		$itemlists = $this->params->get('itemlists');
-		$lists     = explode(';', $itemlists);
+		$lists     = explode(';', rtrim($itemlists,';'));
 
 		foreach ($lists as $list) {
 			$targetid = strstr($list, ':', TRUE);
