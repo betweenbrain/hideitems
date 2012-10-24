@@ -31,9 +31,9 @@ class plgSystemHideitems extends JPlugin
 		$contexts = explode(';', $data);
 
 		foreach ($contexts as $context) {
-			$id      = strstr($context, ':', TRUE);
-			$classes = explode(',', (str_replace(':', '', (strstr($context, ':')))));
+			$id = strstr($context, ':', TRUE);
 			if (($id == '0') || ($itemId == $id)) {
+				$classes = explode(',', (str_replace(':', '', (strstr($context, ':')))));
 				foreach ($classes as $class) {
 					$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z0-9-_ ]*)?\b' . $class . '\b([a-zA-Z0-9-_ ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
 				}
