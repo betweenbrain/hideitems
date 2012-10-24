@@ -1,7 +1,7 @@
 <?php defined('_JEXEC') or die;
 
 /**
- * File       striplist.php
+ * File       hideitems.php
  * Created    10/21/12 3:57 PM
  * Author     Matt Thomas matt@betweenbrain.com
  * Copyright  Copyright (C) 2012 betweenbrain llc.
@@ -9,7 +9,7 @@
 
 jimport('joomla.plugin.plugin');
 
-class plgSystemStriplist extends JPlugin
+class plgSystemHideitems extends JPlugin
 {
 
 	function onAfterRender()
