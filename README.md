@@ -11,3 +11,9 @@ An experimental plugin that removes list items from your page buffer befoe it is
     * Remove item37,item27,item1 when viewing menu item 2.
 
 Tricky, eh?
+
+Oh yeah, it only works with Joomla 1.5 at the moment.
+
+Credits:
+
+Uber crafty regex based on that of http://www.sitepoint.com/forums/showthread.php?655366-Regex-to-replace-li-tags-with-asterisk&s=8b5d43a72a5fe9afff45553861d61a86&p=4481896&viewfull=1#post4481896
