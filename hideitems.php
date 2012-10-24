@@ -37,25 +37,6 @@ class plgSystemHideitems extends JPlugin
 			}
 		}
 
-		/*
-		$classes = $this->params->get('classes');
-		$classes = explode('|', str_replace(' ', '', $classes));
-
-		$contexts = $this->params->get('contexts');
-		$contexts = explode(',', str_replace(' ', '', $contexts));
-
-		$itemId = JRequest::getInt('Itemid', 0);
-
-		foreach ($contexts as $pos => $context) {
-			if ($itemId == $context) {
-				$classes = explode(',', $classes[$pos]);
-				foreach ($classes as $class) {
-					$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z0-9-_ ]*)?\b' . $class . '\b([a-zA-Z0-9-_ ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
-				}
-			}
-		}
-		*/
-
 		JResponse::setBody($buffer);
 
 		return TRUE;
