@@ -1,14 +1,21 @@
-An experimental plugin that removes list items from your page buffer befoe it is rendered by the browser. No more is the day of hidden menus.
+An experimental plugin that removes list items from your page buffer before they are rendered by the browser. No more is the day of hidden Joomla menus!!!
 
  To use:
 
-1. Set the menu item contexts under which this plugin will fire. For exmaple, a Contexts setting of `1,2` will fire the pluginonly when the user is visiting menu items 1 and 2.
+ Define a series of lists, consisting of when to fire the plugin and what to remove. List syntax is:
 
-2. Define the classes of list ites to remove. A List Item Classes setting of `item37,item41,item50,item48,item27,item49|item37,item27,item1` will:
+    X:class1,class2,class3;
+    X2:class4,class5,class6;
+    X3:class1,class3,class5
 
-- Remove item37,item41,item50,item48,item27,item49 when the user is viewing menu item 1
+Where X is the menu item, when being viewed, to fire the plguin, and class is the class of the menu item to remove from the page.
 
-- Remove item37,item27,item1 when viewing menu item 2.
+* Be sure that the menu item being viewed is followed by a colon.
+* Make sure that each list ends with a semi-colon.
+
+The lists can be on different lines in the textarea, and the last list does not need to end with a semi-colon.
+
+TIP: Use 0: to deginate a set of classes to remove from all pages.
 
 Tricky, eh?
 

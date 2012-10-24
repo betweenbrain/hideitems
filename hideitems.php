@@ -22,25 +22,22 @@ class plgSystemHideitems extends JPlugin
 		}
 
 		$buffer = JResponse::getBody();
+		$itemId = JRequest::getInt('Itemid', 0);
 
-		/*
-		$data = "1:item1,bob,home;";
-		$data .= "2:item2,crazy,mom;";
-		$data .= "3:test,mark,bob";
+		$itemlists = $this->params->get('itemlists');
+		$lists     = explode(';', $itemlists);
 
-		$contexts = explode(';', $data);
-
-		foreach ($contexts as $context) {
-			$id = strstr($context, ':', TRUE);
-			if (($id == '0') || ($itemId == $id)) {
-				$classes = explode(',', (str_replace(':', '', (strstr($context, ':')))));
-				foreach ($classes as $class) {
-					$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z0-9-_ ]*)?\b' . $class . '\b([a-zA-Z0-9-_ ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
+		foreach ($lists as $list) {
+			$targetid = strstr($list, ':', TRUE);
+			if (($targetid == '0') || ($targetid == $itemId)) {
+				$targetclasses = explode(',', (str_replace(':', '', (strstr($list, ':')))));
+				foreach ($targetclasses as $targetclass) {
+					$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z0-9-_ ]*)?\b' . $targetclass . '\b([a-zA-Z0-9-_ ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
 				}
 			}
 		}
-		*/
 
+		/*
 		$classes = $this->params->get('classes');
 		$classes = explode('|', str_replace(' ', '', $classes));
 
@@ -57,6 +54,7 @@ class plgSystemHideitems extends JPlugin
 				}
 			}
 		}
+		*/
 
 		JResponse::setBody($buffer);
 
