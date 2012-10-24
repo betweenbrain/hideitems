@@ -23,6 +23,24 @@ class plgSystemHideitems extends JPlugin
 
 		$buffer = JResponse::getBody();
 
+		/*
+		$data = "1:item1,bob,home;";
+		$data .= "2:item2,crazy,mom;";
+		$data .= "3:test,mark,bob";
+
+		$contexts = explode(';', $data);
+
+		foreach ($contexts as $context) {
+			$id      = strstr($context, ':', TRUE);
+			$classes = explode(',', (str_replace(':', '', (strstr($context, ':')))));
+			if (($id == '0') || ($itemId == $id)) {
+				foreach ($classes as $class) {
+					$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z0-9-_ ]*)?\b' . $class . '\b([a-zA-Z0-9-_ ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
+				}
+			}
+		}
+		*/
+
 		$classes = $this->params->get('classes');
 		$classes = explode('|', str_replace(' ', '', $classes));
 
@@ -45,3 +63,5 @@ class plgSystemHideitems extends JPlugin
 		return TRUE;
 	}
 }
+
+
