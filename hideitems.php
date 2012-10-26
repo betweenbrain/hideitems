@@ -21,20 +21,24 @@ class plgSystemHideitems extends JPlugin
 			return;
 		}
 
-		$buffer = JResponse::getBody();
-		$itemId = JRequest::getInt('Itemid', 0);
-
-		$itemlists = $this->params->get('itemlists');
-		$lists     = explode(';', rtrim($itemlists,';'));
+		$buffer      = JResponse::getBody();
+		$diagnostics = $this->params->get('diagnostics');
+		$itemId      = JRequest::getInt('Itemid', 0);
+		$itemlists   = $this->params->get('itemlists');
+		$lists       = explode(';', rtrim($itemlists, ';'));
 
 		foreach ($lists as $list) {
 			$targetid = strstr($list, ':', TRUE);
 			if (($targetid == '0') || ($targetid == $itemId)) {
-				$targetclasses = explode(',', (str_replace(':', '', (strstr($list, ':')))));
+				$targetclasses = explode(',', (str_replace(':', '', rtrim(strstr($list, ':'), ','))));
 				foreach ($targetclasses as $targetclass) {
 					$buffer = preg_replace('/<li( id=\"(.*?)\")? class=\"([a-zA-Z0-9-_ ]*)?\b' . $targetclass . '\b([a-zA-Z0-9-_ ]*)?\"[^>]*>([\s\S]*?)<\/li>/i', '', $buffer);
 				}
 			}
+		}
+
+		if ($diagnostics == '1') {
+			$buffer = 'Current Item ID: ' . $itemId . $buffer;
 		}
 
 		JResponse::setBody($buffer);
