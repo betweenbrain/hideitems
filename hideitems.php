@@ -3,8 +3,11 @@
 /**
  * File       hideitems.php
  * Created    10/21/12 3:57 PM
- * Author     Matt Thomas matt@betweenbrain.com
- * Copyright  Copyright (C) 2012 betweenbrain llc.
+ * Author     Matt Thomas
+ * Website    http://betweenbrain.com/
+ * Support    https://github.com/betweenbrain/hideitems/issues
+ * Copyright  Copyright (C) 2012 betweenbrain llc. All Rights Reserved.
+ * License    GNU GPL v3 or later
  */
 
 jimport('joomla.plugin.plugin');
