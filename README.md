@@ -1,4 +1,4 @@
-n experimental plugin that removes list items from your page buffer before they are rendered by the browser. No more is the day of hidden Joomla menus!!!
+An experimental plugin that removes list items from your page buffer before they are rendered by the browser. No more is the day of hidden Joomla menus!!!
 
 To use:
 
