@@ -2,12 +2,12 @@
 <extension version="2.5" type="plugin" group="system" method="upgrade">
 	<name>System - Hide Items</name>
 	<author>Matt Thomas</author>
-	<creationDate>October, 21st 2012</creationDate>
-	<copyright>Copyright (C) 2012 Matt Thomas. All rights reserved.</copyright>
-	<license>GNU GPL v3 or later</license>
+	<creationDate>March 27, 2014</creationDate>
+	<copyright>Copyright (C) 2012-2014 Matt Thomas. All rights reserved.</copyright>
+	<license>GNU GPL v2 or later</license>
 	<authorEmail>matt@betweenbrain.com</authorEmail>
 	<authorUrl>http://betweenbrain.com</authorUrl>
-	<version>0.1</version>
+	<version>3.0.1</version>
 	<description><![CDATA[
 	<style type="text/css">
 		.panel {background: #ddd;
