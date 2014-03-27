@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <extension version="2.5" type="plugin" group="system" method="upgrade">
-	<name>System - Hide Items</name>
+	<name>plg_system_hideitems</name>
 	<author>Matt Thomas</author>
 	<creationDate>March 27, 2014</creationDate>
 	<copyright>Copyright (C) 2012-2014 Matt Thomas. All rights reserved.</copyright>
@@ -8,49 +8,12 @@
 	<authorEmail>matt@betweenbrain.com</authorEmail>
 	<authorUrl>http://betweenbrain.com</authorUrl>
 	<version>3.0.1</version>
-	<description><![CDATA[
-	<style type="text/css">
-		.panel {background: #ddd;
-		background-image: -moz-linear-gradient(100% 100% 90deg, rgba(225,225,225,1), rgba(255,255,255,1));
-		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)));
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');
-		-moz-border-radius: 2px 12px 2px 2px;
-		-webkit-border-radius: 2px 12px 2px 2px;
-		border-radius: 2px 12px 2px 2px;
-		-moz-box-shadow: 1px 1px 2px #ddd;
-		-webkit-box-shadow: 1px 1px 2px #ddd;
-		border-box-shadow: 1px 1px 2px #ddd;
-		border: 1px solid #ccc;
-		padding: 6px 10px;
-		color: #444;
-		text-decoration: none;}
-		table.admintable td.paramlist_key {font-weight:normal;text-transform:uppercase;text-align:left;}
-		table.admintable td.paramlist_value label {text-transform:none;}
-		table.admintable td.key, table.admintable td.paramlist_key,.pane-sliders .content,.pane-sliders .panel h3, div.panel fieldset {background:none;}
-		div.panel fieldset {margin-bottom:0;padding-bottom:0;}
-		table.admintable td.key, table.admintable td.paramlist_key {border:none;}
-	</style>
-	<h1>No more hidden menus!!!</h1>
-	<p><em>Hide Items</em> is an experimental plugin that removes list items from your page buffer before they are rendered by the browser.</p>
-	<p>To use, define a series of lists, consisting of when to fire the plugin and what to remove. List syntax is:</p>
-	<pre><code>
-	X:class1,class2,class3;
-	X2:class4,class5,class6;
-	X3:parent,hidden,secret
-	</code></pre>
-	<p>Where X is the context menu item (i.e. being viewed) when to fire the plugin, and <code>class</code> is the class of the menu item to remove from the page.</p>
-	<ul>
-	<li>Be sure that the context menu item is followed by a colon.</li>
-	<li>Make sure that each list ends with a semi-colon.</li>
-	<li>The lists can be on different lines in the textarea, and the last list does not need to end with a semi-colon.</li>
-	</ul>
-	<p>TIP: Use 0: to designate a set of classes to remove from all pages.</p>
-	<p style="clear:left">&copy; 2012 Matt Thomas, a.k.a. <a href="http://betweenbrain.com/">betweenbrain</a></p>
-	<p>For support, visit <a href="https://github.com/betweenbrain/hideitems/issues" target="_blank">https://github.com/betweenbrain/hideitems</a></p>
-	]]></description>
+	<description>PLG_SYSTEM_HIDEITEMS_DESC</description>
 	<files>
 		<filename plugin="hideitems">hideitems.php</filename>
+		<folder>language</folder>
 	</files>
+
 	<params>
 		<param name="diagnostics"
 			   type="radio"
